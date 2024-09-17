@@ -1,11 +1,8 @@
 def add_everything_up(a, b):
-    if isinstance(a, int) and isinstance(b, int):
-        return a + b
-    elif isinstance(a, float) and isinstance(b, float):
-        return a + b
-    elif isinstance(a, str) and isinstance(b, str):
-        return a + b
-    else:
+    try:
+        result = a + b
+        return result
+    except TypeError as e:
         return f"{a}{b}"
     
 print(add_everything_up(123.456, 'строка'))
